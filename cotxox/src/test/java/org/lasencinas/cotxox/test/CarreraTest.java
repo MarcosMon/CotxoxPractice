@@ -43,6 +43,14 @@ public class CarreraTest {
 		carrera = new Carrera(tarjetaCredito);
 		assertEquals(tarjetaCredito, carrera.getTarjetaCredito());
 	}
+	@Test
+	public void comprobarTiempoEsperado() {
+		int tiempoEsperadoMinutos = 10;
+		carrera = new Carrera();
+		carrera.setTiempoEsperado(tiempoEsperadoMinutos);
+		assertEquals(tiempoEsperadoMinutos, carrera.getTiempoEsperado());
+
+	}
 	}
 	
 

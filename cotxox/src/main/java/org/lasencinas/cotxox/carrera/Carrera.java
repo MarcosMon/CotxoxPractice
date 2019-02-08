@@ -5,6 +5,7 @@ public class Carrera {
 	private String destino = null;
 	private double distancia;
 	private String origen;
+	private int tiempoEsperadoMinutos;
 
 	public Carrera() {
 
@@ -45,6 +46,15 @@ public class Carrera {
 	public String getOrigen() {
 		
 		return this.origen;
+	}
+
+	public void setTiempoEsperado(int tiempoEsperadoMinutos) {
+		this.tiempoEsperadoMinutos = tiempoEsperadoMinutos;
+		
+	}
+
+	public int getTiempoEsperado() {
+		return this.tiempoEsperadoMinutos;
 	}
 
 }
