@@ -23,6 +23,27 @@ public class CarreraTest {
 		carrera.setDestino(destino);
 		assertEquals("Magaluf", carrera.getDestino());
 	}
+	@Test
+	public void ComprobarDistancia() {
+		carrera = new Carrera();
+		double distancia = 7.75;
+		carrera.setDistancia(distancia);
+		assertEquals(distancia, carrera.getDistancia(), 0.00);
+		}
+	@Test
+	public void ComprobarOrigen() {
+		carrera = new Carrera();
+		String origen = "Aeroport Son Sant Joan";
+		carrera.setOrigen("Aeroport Son Sant Joan");
+		assertEquals(origen, carrera.getOrigen());
+	}
+	@Test
+	public void comprobarTarjetaCredito() {
+		String tarjetaCredito = "4916119711304546";
+		carrera = new Carrera(tarjetaCredito);
+		assertEquals(tarjetaCredito, carrera.getTarjetaCredito());
+	}
+	}
 	
 
-}
+
