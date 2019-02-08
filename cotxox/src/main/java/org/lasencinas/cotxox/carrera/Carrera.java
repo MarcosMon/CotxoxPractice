@@ -14,6 +14,9 @@ public class Carrera {
 		this.tarjetaCredito = tarjetaCredito;
 
 	}
+	public String getTarjetaCredito() {
+		return this.tarjetaCredito;
+	}
 
 	public String getDestino() {
 		return this.destino;
