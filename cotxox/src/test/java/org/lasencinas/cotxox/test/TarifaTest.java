@@ -2,7 +2,7 @@ package org.lasencinas.cotxox.test;
 
 import static org.junit.Assert.assertEquals;
 
-import org.junit.Before;
+
 import org.junit.Test;
 import org.lasencinas.cotxox.carrera.Carrera;
 import org.lasencinas.cotxox.tarifa.Tarifa;
@@ -10,21 +10,17 @@ import org.lasencinas.cotxox.tarifa.Tarifa;
 public class TarifaTest {
 
 	Carrera carrera = new Carrera();
-	Tarifa tarifa = new Tarifa();
 
-	@Before
-	public void init() {
-		tarifa = new Tarifa();
-	}
+
 
 	@Test
 	public void comprobarTarifaTiempoEsperado() {
 		int tiempoEsperado = 10;
 		double totalEsperado = 3.5;
 		carrera.setTiempoEsperado(tiempoEsperado);
-		tarifa.calcularCosteTiempo(carrera);
+		Tarifa.calcularCosteTiempo(carrera);
 
-		assertEquals(totalEsperado, tarifa.getCosteTiempo(), 0.01);
+		assertEquals(totalEsperado, Tarifa.getCosteTiempo(), 0.01);
 
 	}
 
@@ -33,9 +29,9 @@ public class TarifaTest {
 		double distanciaEsperada = 7.75;
 		double totalEsperado = 10.46;
 		carrera.setDistancia(distanciaEsperada);
-		tarifa.calcularCosteDistancia(carrera);
+		Tarifa.calcularCosteDistancia(carrera);
 
-		assertEquals(totalEsperado, tarifa.getCosteDistancia(), 0.01);
+		assertEquals(totalEsperado, Tarifa.getCosteDistancia(), 0.01);
 
 	}
 
@@ -48,10 +44,10 @@ public class TarifaTest {
 		double totalCosteEsperado = distanciaEsperada * costeMilla + tiempoEsperado * costeMinuto;
 		carrera.setDistancia(distanciaEsperada);
 		carrera.setTiempoEsperado(tiempoEsperado);
-		tarifa.calcularCosteDistancia(carrera);
-		tarifa.calcularCosteTiempo(carrera);
-		tarifa.calcularCosteTotalEsperado();
-		assertEquals(totalCosteEsperado, tarifa.getCosteTotalEsperado(), 0.01);
+		Tarifa.calcularCosteDistancia(carrera);
+		Tarifa.calcularCosteTiempo(carrera);
+		Tarifa.calcularCosteTotalEsperado();
+		assertEquals(totalCosteEsperado, Tarifa.getCosteTotalEsperado(), 0.01);
 	}
 	@Test
 	public void comprobarTarifaMinima() {
@@ -60,10 +56,10 @@ public class TarifaTest {
 		int tiempoEsperado = 1;
 		carrera.setDistancia(distanciaEsperada);
 		carrera.setTiempoEsperado(tiempoEsperado);
-		tarifa.calcularCosteDistancia(carrera);
-		tarifa.calcularCosteTiempo(carrera);
-		tarifa.calcularCosteTotalEsperado();
-		assertEquals(tarifaMinimaEsperada, tarifa.getCosteTotalEsperado(), 0.01);
+		Tarifa.calcularCosteDistancia(carrera);
+		Tarifa.calcularCosteTiempo(carrera);
+		Tarifa.calcularCosteTotalEsperado();
+		assertEquals(tarifaMinimaEsperada, Tarifa.getCosteTotalEsperado(), 0.01);
 		
 	}
 
