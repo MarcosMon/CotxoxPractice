@@ -21,7 +21,7 @@ public class CarreraTest {
 		carrera = new Carrera();
 		String destino = "Magaluf";
 		carrera.setDestino(destino);
-		assertEquals("Magaluf", carrera.getDestino());
+		assertEquals(destino, carrera.getDestino());
 	}
 	@Test
 	public void ComprobarDistancia() {
@@ -34,7 +34,7 @@ public class CarreraTest {
 	public void ComprobarOrigen() {
 		carrera = new Carrera();
 		String origen = "Aeroport Son Sant Joan";
-		carrera.setOrigen("Aeroport Son Sant Joan");
+		carrera.setOrigen(origen);
 		assertEquals(origen, carrera.getOrigen());
 	}
 	@Test
@@ -48,7 +48,7 @@ public class CarreraTest {
 		int tiempoEsperadoMinutos = 10;
 		carrera = new Carrera();
 		carrera.setTiempoEsperado(tiempoEsperadoMinutos);
-		assertEquals(tiempoEsperadoMinutos, carrera.getTiempoEsperado());
+		assertEquals(tiempoEsperadoMinutos, carrera.getTiempoEsperadoMinutos());
 
 	}
 	}
