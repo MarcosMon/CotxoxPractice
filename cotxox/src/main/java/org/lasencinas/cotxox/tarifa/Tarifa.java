@@ -5,7 +5,7 @@ import org.lasencinas.cotxox.carrera.*;
 public class Tarifa {
 	private static double costeMilla = 1.35;
 	private static double costeMinuto = 0.35;
-	private static int costeMinimo = 5;
+	private static byte costeMinimo = 5;
 	private double porcentajeComision;
 	private static double costeTiempoTotal;
 	private static double costeDistanciaTotal;
